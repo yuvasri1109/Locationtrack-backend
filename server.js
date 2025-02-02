@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-//const MONGO_URI ="mongodb+srv://yuvasrib:yuvabk1118@cluster0.ipzth.mongodb.net/Location-track"
+const MONGO_URI ="mongodb+srv://yuvasrib:yuvabk1118@cluster0.ipzth.mongodb.net/Location-track"
 
-const MONGO_URI = "mongodb://localhost:27017/Location-track";
+//const MONGO_URI = "mongodb://localhost:27017/Location-track";
 const JWT_SECRET = "yuva";
 mongoose
   .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
