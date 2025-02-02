@@ -14,9 +14,10 @@ const MONGO_URI ="mongodb+srv://yuvasrib:yuvabk1118@cluster0.ipzth.mongodb.net/L
 //const MONGO_URI = "mongodb://localhost:27017/Location-track";
 const JWT_SECRET = "yuva";
 mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGO_URI)
   .then(() => console.log("MongoDB connected"))
-  .catch((error) => console.error(" Error connecting to MongoDB:", error));
+  .catch((error) => console.error("Error connecting to MongoDB:", error));
+
 
 const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
